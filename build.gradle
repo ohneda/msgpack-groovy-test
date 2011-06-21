@@ -1,0 +1,19 @@
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+
+repositories {
+     mavenCentral()
+     mavenRepo urls:'https://repository.jboss.org/nexus/content/groups/public-jboss/'
+     mavenRepo urls: 'http://msgpack.org/maven2/'
+     }
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.0'
+    compile group:'org.msgpack', name: 'msgpack', version: '0.5.1-devel'
+    compile group:'org.msgpack', name: 'msgpack-rpc', version: '0.6.1-devel'
+}
+
+task(runSample, dependOn:'classes', type: JavaExec) {
+    main = 'SerializeAndDeserialize'
+    classpath = sourceSets.main.runtimeClasspath
+}
