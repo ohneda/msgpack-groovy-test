@@ -6,7 +6,9 @@ class RPCServerTest {
     public Message getMessage(String message, Double num, Date date){
         new Message( str: message, num: num, date: date)
     }
-
+    public void setMessage(Message message){
+        println message.dump()
+    }
 }
 
 EventLoop loop = EventLoop.defaultEventLoop();
