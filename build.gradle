@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.0'
-    compile group:'org.msgpack', name: 'msgpack', version: '0.5.1-devel'
+    compile group:'org.msgpack', name: 'msgpack', version: '0.5.2-devel'
     compile group:'org.msgpack', name: 'msgpack-rpc', version: '0.6.1-devel'
 }
 
